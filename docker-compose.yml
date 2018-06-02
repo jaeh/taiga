@@ -39,7 +39,7 @@ services:
       - ./taiga-conf:/taiga
 
   postgres:
-    image: postgres
+    image: postgres:11-alpine
     environment:
       POSTGRES_DB: taigadb
       POSTGRES_USER: taiga
@@ -55,15 +55,15 @@ services:
   # rabbit:
   #   image: rabbitmq:3
   #   hostname: rabbit
-  # 
+  #
   # redis:
   #   image: redis:3
-  # 
+  #
   # celery:
   #   image: celery
   #   links:
   #     - rabbit
-  # 
+  #
   # events:
   #   image: benhutchins/taiga-events
   #   links:
